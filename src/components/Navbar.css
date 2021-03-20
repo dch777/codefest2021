@@ -1,0 +1,12 @@
+.navbar-custom {
+	background-color: #8ac383;
+}
+
+.navbar-custom .navbar-brand {
+	color: #fffcf2;
+}
+
+.navbar-custom .navbar-text,
+.navbar-custom .nav-link {
+	color: #effcdb;
+}
