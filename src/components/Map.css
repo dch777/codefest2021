@@ -1,0 +1,20 @@
+body {
+	background: #000000;
+	margin: 0px;
+	padding: 0px;
+}
+
+.leaflet-container {
+	flex: 1 1 auto;
+	height: 94.3vh;
+	z-index: 3;
+}
+
+#sidebar {
+	position: absolute;
+	width: 220px;
+	right: 30;
+	z-index: 4;
+	margin: 0.5rem;
+	background: #3f474e;
+}
