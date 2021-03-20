@@ -41,7 +41,7 @@ const Map = (props) => {
 						<Popup>
 							<b> {locations[location]["center name"]} </b> <br />{" "}
 							{locations[location]["center address"]} <br />
-							Capacity: {locations[location]["center capacity"]}
+							Capacity: {locations[location]["center capacity"]} <br />
 							Owned By: {locations[location]["username"]}
 						</Popup>
 					</Marker>
