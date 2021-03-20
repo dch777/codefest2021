@@ -14,7 +14,7 @@ const Map = (props) => {
 	const [locations, setLocations] = useState({});
 
 	useEffect(() => {
-		axios.get("http://localhost:5000/").then((res) => {
+		axios.get("https://f4300ef5819b.ngrok.io/").then((res) => {
 			setLocations(res.data);
 		});
 	}, []);
@@ -35,7 +35,16 @@ const Map = (props) => {
 					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 				/>
 				{Object.keys(locations).map((location) => (
-					<Geosearch title={locations[location]["center name"]} addr={locations[location]["center address"]} />
+					<Marker
+						position={[locations[location]["lat"], locations[location]["long"]]}
+					>
+						<Popup>
+							<b> {locations[location]["center name"]} </b> <br />{" "}
+							{locations[location]["center address"]} <br />
+							Capacity: {locations[location]["center capacity"]}
+							Owned By: {locations[location]["username"]}
+						</Popup>
+					</Marker>
 				))}
 				<LocateControl options={locateControlOptions} />
 			</MapContainer>
